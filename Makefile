@@ -1,11 +1,11 @@
 .PHONY: all check clean
 
 CXX = nvcc
-CXX_FLAG = -std=c++20 -g -G -Xcompiler -fopenmp
+CXX_FLAG = -std=c++17 -g -G -Xcompiler -fopenmp
 INCLUDE_PATH = -Iheader -Iheader_cuda
 
 CPPCHECK = ../cppcheck-2.17.1/cppcheck
-CPPCHECK_FLAG = --enable=all --inconclusive --suppress=missingIncludeSystem
+CPPCHECK_FLAG = --enable=all --check-level=exhaustive --inconclusive --suppress=missingIncludeSystem
 
 SOURCE_DIRECTORY = source
 OBJECT_DIRECTORY = object
